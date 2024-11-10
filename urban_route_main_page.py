@@ -9,8 +9,9 @@ class UrbanRoutesPage:
     CUSTOM_OPTION_LOCATOR = (By.XPATH, '//div[text()="Custom"]')
     BIKE_ICON_LOCATOR = ...
     BIKE_TEXT_LOCATOR = ...
+    DURATION_TEXT_LOCATOR = ...
 
-    def __init__(self, driver):
+def __init__(self, driver):
         self.driver = driver  # Initialize the driver
 
     def enter_from_location(self, from_text):
@@ -31,4 +32,12 @@ class UrbanRoutesPage:
 
     def get_bike_text(self):
         # Return the "Bike" text
+        ...
+
+    # The new method returning the "Duration" text
+    def get_duration_text(self):
+        ...
+
+    # Step to enter both "From" and "To" locations
+    def enter_locations(self, from_text, to_text):
         ...
