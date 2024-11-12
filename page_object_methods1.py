@@ -31,4 +31,4 @@ class HomePageAround:
     def click_save_button(self):
         self.driver.find_element(*self.save_button).click()
 
-    # The step to add a new place
+    # The step to add a new placehmhm
