@@ -3,7 +3,7 @@ import time
 from urban_routes_main_page import UrbanRoutesPage
 
 # Create a class for both tests
-class TestUrbanRoutes
+class TestUrbanRoutes:
 
 # Initialize the Chrome driver once for the class
     @classmethod
