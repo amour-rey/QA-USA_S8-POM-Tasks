@@ -6,8 +6,7 @@
 
 <img alt="img.png" height="200" src="images/img2_project_set_up.png" width="250"/>
 
-
-<img alt="img.png" src="img.png" width="500" height="200"/>
+<img alt="img3_project_set_up.png" height="200" src="images/img3_project_set_up.png" width="500"/>
 
 
 
