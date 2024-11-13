@@ -37,7 +37,3 @@ class UrbanRoutesPage:
     # The new method returning the "Duration" text
     def get_duration_text(self):
         ...
-
-    # Step to enter both "From" and "To" locations
-    def enter_locations(self, from_text, to_text):
-        ...

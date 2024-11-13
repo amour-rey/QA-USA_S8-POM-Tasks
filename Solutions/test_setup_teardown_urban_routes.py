@@ -12,7 +12,7 @@ class TestUrbanRoutes:
         cls.driver = webdriver.Chrome()
 
     def test_custom_bike_option(self):
-        self.driver.get('https://cnt-1474c173-819e-4b34-96c3-e898035d5736.containerhub.tripleten-services.com')
+        self.driver.get('https://cnt-36c55362-e645-4c2f-b3b8-d0990929bc67.containerhub.tripleten-services.com')
         urban_routes_page = UrbanRoutesPage(self.driver)
         urban_routes_page.enter_locations('East 2nd Street, 601', '1300 1st St')
         urban_routes_page.click_custom_option()
@@ -24,7 +24,7 @@ class TestUrbanRoutes:
         assert expected_value in actual_value, f"Expected '{expected_value}', but got '{actual_value}'"
 
     def test_duration_custom_bike_option(self):
-        self.driver.get('https://cnt-1474c173-819e-4b34-96c3-e898035d5736.containerhub.tripleten-services.com')
+        self.driver.get('https://cnt-36c55362-e645-4c2f-b3b8-d0990929bc67.containerhub.tripleten-services.com')
         urban_routes_page = UrbanRoutesPage(self.driver)
         urban_routes_page.enter_locations('East 2nd Street, 601', '1300 1st St')
         urban_routes_page.click_custom_option()

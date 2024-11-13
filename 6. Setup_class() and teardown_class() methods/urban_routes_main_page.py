@@ -34,6 +34,10 @@ class UrbanRoutesPage:
         # Return the "Bike" text
         return self.driver.find_element(*self.BIKE_TEXT_LOCATOR).text
 
-    # The new method returning the "Duration" text
     def get_duration_text(self):
         return self.driver.find_element(*self.DURATION_TEXT_LOCATOR).text
+
+    # Step to enter both "From" and "To" locations
+    def enter_locations(self, from_text, to_text):
+        self.enter_from_location(from_text)
+        self.enter_to_location(to_text)
