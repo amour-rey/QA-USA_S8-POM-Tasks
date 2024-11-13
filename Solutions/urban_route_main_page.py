@@ -7,37 +7,38 @@ class UrbanRoutesPage:
     FROM_LOCATOR = (By.ID, 'from')
     TO_LOCATOR = (By.ID, 'to')
     CUSTOM_OPTION_LOCATOR = (By.XPATH, '//div[text()="Custom"]')
-    BIKE_ICON_LOCATOR = ...
-    BIKE_TEXT_LOCATOR = ...
-    DURATION_TEXT_LOCATOR = ...
+    BIKE_ICON_LOCATOR = (By.XPATH, '//img[@src="/static/media/bike.fb41c762.svg"]')
+    BIKE_TEXT_LOCATOR = (By.XPATH, '//div[contains(text(),"Bike")]')
+    DURATION_TEXT_LOCATOR = (By.XPATH, '//div[contains(text(),"Duration")]')
 
-def __init__(self, driver):
+    def __init__(self, driver):
         self.driver = driver  # Initialize the driver
 
     def enter_from_location(self, from_text):
-        # Type the "From" location
+        # Enter From
         self.driver.find_element(*self.FROM_LOCATOR).send_keys(from_text)
 
     def enter_to_location(self, to_text):
-        # Type the "To" location
+        # Enter To
         self.driver.find_element(*self.TO_LOCATOR).send_keys(to_text)
 
     def click_custom_option(self):
-        # Click the "Custom" option
-        ...
+        # Click Custom
+        self.driver.find_element(*self.CUSTOM_OPTION_LOCATOR).click()
 
     def click_bike_icon(self):
-        # Click the "Bike" icon
-        ...
+        # Click Bike Icon
+        self.driver.find_element(*self.BIKE_ICON_LOCATOR).click()
 
     def get_bike_text(self):
         # Return the "Bike" text
-        ...
+        return self.driver.find_element(*self.BIKE_TEXT_LOCATOR).text
 
     # The new method returning the "Duration" text
     def get_duration_text(self):
-        ...
+        return self.driver.find_element(*self.DURATION_TEXT_LOCATOR).text
 
     # Step to enter both "From" and "To" locations
     def enter_locations(self, from_text, to_text):
-        ...
+        self.enter_from_location(from_text)
+        self.enter_to_location(to_text)
