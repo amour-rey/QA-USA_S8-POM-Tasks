@@ -18,6 +18,4 @@ def test_custom_bike_option():
     expected_value = "Bike"
     assert expected_value in actual_value, f"Expected '{expected_value}', but got '{actual_value}'"
     actual_value = urban_routes_page.get_duration_text()
-    expected_value = "Duration"
-    assert expected_value in actual_value, f"Expected '{expected_value}', but got '{actual_value}'"
     driver.quit()

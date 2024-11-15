@@ -10,13 +10,13 @@ class TestUrbanRoutes:
     def setup_class(cls):
         ...
 
-    def test_custom_scooter_option(self):
+    def test_custom_bike_option(self):
         self.driver.get('https://cnt-8f25f166-edc1-4f8d-b177-7e4079036890.containerhub.tripleten-services.com')
         urban_routes_page = UrbanRoutesPage(self.driver)
         ...
         assert ...
 
-    def test_duration_custom_scooter_option(self):
+    def test_duration_custom_bike_option(self):
         self.driver.get('https://cnt-8f25f166-edc1-4f8d-b177-7e4079036890.containerhub.tripleten-services.com')
         urban_routes_page = UrbanRoutesPage(self.driver)
         ...

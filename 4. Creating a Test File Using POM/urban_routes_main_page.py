@@ -9,7 +9,6 @@ class UrbanRoutesPage:
     CUSTOM_OPTION_LOCATOR = (By.XPATH, '//div[text()="Custom"]')
     BIKE_ICON_LOCATOR = (By.XPATH, '//img[@src="/static/media/bike.fb41c762.svg"]')
     BIKE_TEXT_LOCATOR = (By.XPATH, '//div[contains(text(),"Bike")]')
-    DURATION_TEXT_LOCATOR = (By.XPATH, '//div[contains(text(),"Duration")]')
 
     def __init__(self, driver):
         self.driver = driver  # Initialize the driver
@@ -34,5 +33,3 @@ class UrbanRoutesPage:
         # Return the "Bike" text
         return self.driver.find_element(*self.BIKE_TEXT_LOCATOR).text
 
-    def get_duration_text(self):
-        return self.driver.find_element(*self.DURATION_TEXT_LOCATOR).text
