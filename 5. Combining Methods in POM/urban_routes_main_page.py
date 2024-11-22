@@ -1,26 +1,24 @@
-import time
-
 from selenium.webdriver.common.by import By
 
 
 # Defining the page class, locators and method in the class
 class UrbanRoutesPage:
     # Locators as class attributes
-    FROM_LOCATOR = (By.ID, ...)
-    TO_LOCATOR = (By.ID, ...)
+    FROM_LOCATOR = (By.ID, 'from')
+    TO_LOCATOR = (By.ID, 'to')
     CUSTOM_OPTION_LOCATOR = (By.XPATH, '//div[text()="Custom"]')
     DRIVE_ICON_LOCATOR = (By.XPATH, '(//img[@src="/static/media/car.8a2b1ff5.svg"])[2]')
-    BOOK_BUTTON_LOCATOR = (By.XPATH, ...)
+    BOOK_BUTTON_LOCATOR = (By.XPATH, '//button[@class="button round"]')
     CAMPING_LOCATOR = (By.XPATH, '//div[contains(text(),"Camping")]')
-    AUDI_TEXT_LOCATOR = (By.XPATH, ...)
+    AUDI_TEXT_LOCATOR = (By.XPATH, '//div[contains(text(),"Audi A3 Sedan")]')
     ADD_DRIVER_LICENSE_LOCATOR = (By.XPATH, '(//div[contains(text(),"Add a driver")])[2]')
-    FIRST_NAME_LOCATOR = (By.ID, ...)
-    LAST_NAME_LOCATOR = (By.ID, ...)
-    DATE_OF_BIRTH_LOCATOR = (By.ID, ...)
-    NUMBER_LOCATOR = (By.ID, ...)
+    FIRST_NAME_LOCATOR = (By.ID, 'firstName')
+    LAST_NAME_LOCATOR = (By.ID, 'lastName')
+    DATE_OF_BIRTH_LOCATOR = (By.ID, 'birthDate')
+    NUMBER_LOCATOR = (By.ID, 'number')
     ADD_BUTTON_LOCATOR = (By.XPATH, '//form/div[2]/button[1]')
     ADD_A_DRIVER_LICENCE_TITLE_LOCATOR = (By.XPATH, '//div[contains(text(),"Add a driver")]')
-    VERIFICATION_TEXT_LOCATOR = (By.XPATH, ...)
+    VERIFICATION_TEXT_LOCATOR = (By.XPATH, '//div[contains(text(),"Thank you")]')
 
     def __init__(self, driver):
         self.driver = driver  # Initialize the driver
@@ -31,28 +29,23 @@ class UrbanRoutesPage:
 
     def enter_to_location(self, to_text):
         # Enter To
-        ...
+        self.driver.find_element(*self.TO_LOCATOR).send_keys(to_text)
 
     def click_custom_option(self):
         # Click Custom
-        ...
-
-    # Step to enter both "From" and "To" locations
-    def enter_locations(self, from_text, to_text):
-        ...
-        ...
+        self.driver.find_element(*self.CUSTOM_OPTION_LOCATOR).click()
 
     def click_drive_icon(self):
         # Click Drive Icon
-        ...
+        self.driver.find_element(*self.DRIVE_ICON_LOCATOR).click()
 
     def click_book_button(self):
         # Click Book Button
-        ...
+        self.driver.find_element(*self.BOOK_BUTTON_LOCATOR).click()
 
     def click_camping(self):
         # Click Camping
-        ...
+        self.driver.find_element(*self.CAMPING_LOCATOR).click()
 
     def get_audi_text(self):
         # Return the "Audi" text
@@ -60,7 +53,7 @@ class UrbanRoutesPage:
 
     def click_add_driver_license(self):
         # Click Add Driver's Licence
-        ...
+        self.driver.find_element(*self.ADD_DRIVER_LICENSE_LOCATOR).click()
 
     def enter_first_name(self, first_name):
         # Enter First Name
@@ -68,15 +61,15 @@ class UrbanRoutesPage:
 
     def enter_last_name(self, last_name):
         # Enter Last Name
-        ...
+        self.driver.find_element(*self.LAST_NAME_LOCATOR).send_keys(last_name)
 
     def enter_date_of_birth(self, date_of_birth):
         # Enter Date of Birth
-        ...
+        self.driver.find_element(*self.DATE_OF_BIRTH_LOCATOR).send_keys(date_of_birth)
 
     def enter_number(self, number):
         # Enter Number
-        ...
+        self.driver.find_element(*self.NUMBER_LOCATOR).send_keys(number)
 
     def click_title(self):
         # Click Add a Driver's License Title
@@ -84,29 +77,17 @@ class UrbanRoutesPage:
 
     def click_add_button(self):
         # Click Add Button
-        ...
+        self.driver.find_element(*self.ADD_BUTTON_LOCATOR).click()
 
     def get_verification_text(self):
         # Return the verification text
-        return ...
+        return self.driver.find_element(*self.VERIFICATION_TEXT_LOCATOR).text
 
     # Step to enter "From", "To" and to click "custom_option", "drive_icon", "book button", and "camping"
     def choose_camping_car(self, from_text, to_text):
-        self.enter_from_location(...)
-        self.enter_to_location(...)
-        time.sleep(1)
-        self....
-        self....
-        self....
-        self....
+        ...
 
     # Step to click "add driver's license"; to enter "first_name", "last_name", "date_of_birth", "number"; and
     # to click "title" and "add button"
     def adding_driver_license(self, first_name, last_name, date_of_birth, number):
-        self.click_add_driver_license()
-        self....
-        self....
-        self....
-        self....
-        self.click_title()
-        self....
+        ...

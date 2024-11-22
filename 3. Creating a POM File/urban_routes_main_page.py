@@ -14,11 +14,11 @@ class UrbanRoutesPage:
         self.driver = driver  # Initialize the driver
 
     def enter_from_location(self, from_text):
-        # Type the "From" location
+        # Enter From
         self.driver.find_element(*self.FROM_LOCATOR).send_keys(from_text)
 
     def enter_to_location(self, to_text):
-        # Type the "To" location
+        # Enter To
         self.driver.find_element(*self.TO_LOCATOR).send_keys(to_text)
 
     def click_custom_option(self):
@@ -31,8 +31,4 @@ class UrbanRoutesPage:
 
     def get_bike_text(self):
         # Return the "Bike" text
-        ...
-
-    # The new method returning the "Duration" text
-    def get_duration_text(self):
         ...

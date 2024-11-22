@@ -6,7 +6,7 @@ from urban_routes_main_page import UrbanRoutesPage  # Import the POM class
 def test_custom_bike_option():
     driver = webdriver.Chrome()
     # Update server URL
-    driver.get('https://cnt-dd3ea7cf-991c-4e39-8316-2f92a9b80a12.containerhub.tripleten-services.com')
+    driver.get('https://cnt-1559d7a4-e9f5-49d2-a568-67515da435b6.containerhub.tripleten-services.com')
     urban_routes_page = UrbanRoutesPage(driver)
     urban_routes_page.enter_from_location('East 2nd Street, 601')
     urban_routes_page.enter_to_location('1300 1st St')
@@ -17,5 +17,4 @@ def test_custom_bike_option():
     actual_value = urban_routes_page.get_bike_text()
     expected_value = "Bike"
     assert expected_value in actual_value, f"Expected '{expected_value}', but got '{actual_value}'"
-    actual_value = urban_routes_page.get_duration_text()
     driver.quit()
